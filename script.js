@@ -18,21 +18,17 @@ const taskList = [
    { description: "Help sister learn basic web development", status: "pending", priority: "medium"},
 
    { description: "Do laundry", status: "pending", priority: "high"},
-   
+
    { description: "Setup meetup with Abdul", status: "pending", priority: "low"}
  ];
 
 
 const pendingTasks = () => {
 
-    if(taskList.find(pending)) {
-        console.log("heeheee");
-    
-    } else {
-        return null;
-    }
-}
+    return console.log((taskList.filter(task => task.status === "pending"))); 
 
+
+}
 pendingTasks();
 
 const taskMessage = () => {
