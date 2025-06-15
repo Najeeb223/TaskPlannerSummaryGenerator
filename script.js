@@ -96,7 +96,15 @@ const taskList = [taskOne, taskTwo, taskThree, taskFour, taskFive, taskSix, task
 
 const pendingTasks = () => {
 
+    if(taskList.find(pending)) {
+        console.log("heeheee");
+    
+    } else {
+        return null;
+    }
 }
+
+pendingTasks();
 
 const taskMessage = () => {
 
