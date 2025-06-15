@@ -25,12 +25,26 @@ const taskList = [
 
 const pendingTasks = () => {
 
-    return console.log((taskList.filter(task => task.status === "pending"))); 
-
+   // return console.log((taskList.filter(task => task.status === "pending"))); 
 
 }
 pendingTasks();
 
 const taskMessage = () => {
 
+    return console.log(((taskList.map.forEach(task => `
+        
+        ${task.description} in the morning | Status ${task.status} | Priority is ${task.priority}
+        ${task.description} after Salah | Status ${task.status} | Priority is ${task.priority}
+        ${task.description} after dhikr | Status ${task.status} | Priority is ${task.priority}
+        ${task.description} in the afternoon | Status ${task.status} | Priority is ${task.priority}
+        ${task.description} throughout the day to build network | Status ${task.status} | Priority is ${task.priority}
+        ${task.description} when you have enough money | Status ${task.status} | Priority is ${task.priority}
+        ${task.description} when she is ready to learn it | Status ${task.status} | Priority is ${task.priority}
+        ${task.description} next week | Status ${task.status} | Priority is ${task.priority}
+        ${task.description} when he is available | Status ${task.status} | Priority is ${task.priority}
+        ` ))));
+
 }
+taskMessage();
+
