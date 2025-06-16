@@ -31,20 +31,30 @@ const pendingTasks = () => {
 pendingTasks();
 
 const taskMessage = () => {
+   const timePhrases = [
+     "in the morning",
+     "after Salah",
+     "after dhikr",
+     "in the afternoon",
+     "throughout the day to build network",
+     "when you have enough money",
+     "when she is ready to learn it",
+     "next week",
+     "when he is available"
+   ];
+ 
+   taskList.forEach(task => {
+     timePhrases.forEach(phrase => {
+       console.log(`${task.description} ${phrase} | Status ${task.status} | Priority is ${task.priority}`);
+     });
+   });
+ };
+taskMessage();
 
-    return console.log(((taskList.map.forEach(task => `
-        
-        ${task.description} in the morning | Status ${task.status} | Priority is ${task.priority}
-        ${task.description} after Salah | Status ${task.status} | Priority is ${task.priority}
-        ${task.description} after dhikr | Status ${task.status} | Priority is ${task.priority}
-        ${task.description} in the afternoon | Status ${task.status} | Priority is ${task.priority}
-        ${task.description} throughout the day to build network | Status ${task.status} | Priority is ${task.priority}
-        ${task.description} when you have enough money | Status ${task.status} | Priority is ${task.priority}
-        ${task.description} when she is ready to learn it | Status ${task.status} | Priority is ${task.priority}
-        ${task.description} next week | Status ${task.status} | Priority is ${task.priority}
-        ${task.description} when he is available | Status ${task.status} | Priority is ${task.priority}
-        ` ))));
+const aggregateTasks = () => {
+
 
 }
-taskMessage();
+
+aggregateTasks();
 
