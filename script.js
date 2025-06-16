@@ -132,7 +132,30 @@ const highestPriorityPending = () => {
    },
 
         {highPriorityAndPending: 0});
-        console.log(highPriorityCheck);
+       // console.log(highPriorityCheck);
 
 }
 highestPriorityPending();
+
+const highPriorityTaskCheck = () => {
+   // Step 1: Filter out only the tasks that have high priority
+   const highPriorityTasks = taskList.filter(task => task.priority === "high");
+ 
+   // Step 2: Check if every high-priority task has the status "done"
+   const allHighPriorityDone = highPriorityTasks.every(task => task.status === "done");
+ 
+   // Step 3: Conditional output based on the result of the 'every' check
+   if (allHighPriorityDone) {
+     // If ALL high-priority tasks are done, print a success message
+     console.log("✅ Every high-priority task has been completed.");
+   } else {
+     // If at least ONE high-priority task is not done, print a warning message
+     console.log("❌ Not every high-priority task has been completed. Go do them!");
+   }
+ };
+ 
+ // Step 4: Call the function to run the check
+ highPriorityTaskCheck();
+ 
+ 
+highPriorityTaskCheck();
