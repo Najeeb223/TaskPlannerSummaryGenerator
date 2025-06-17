@@ -39,14 +39,42 @@ const createPost = (post) => {
 
     });
 }
+
+
     /*
     createPost({title: "Post Three", body: "This is post three"})   
     .then(getPosts)
     .catch(err => console.log(err));
     */
 
-    /*
+    // Async await is a way to handle responses not a different way to write them
+    // A more elegant way to handle promises
+/*    
+    const init = async () => {
+       await createPost({title: "Post Three", body: "This is post three"});
+       
+       getPosts();
+    }
+    init();
+ */
 
+
+    // Async await with fetch
+
+    const fetchUsers = async () => {
+
+        const res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        const data = await res.json();
+
+        console.log(data);
+    }
+    fetchUsers();
+    
+
+
+
+    /*
     const promise1 = Promise.resolve("Hello World");
     const promise2 = 10;
     const promise3 = new Promise((resolve, reject) => 
@@ -63,3 +91,5 @@ const createPost = (post) => {
             (values) => console.log(values)
             );
     */
+
+            
