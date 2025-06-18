@@ -21,7 +21,7 @@ const getPosts = () => {
 const createPost = (post) => {
 
     // Promise parameters - when you want to resolve a promise successfully you call resolve and when something goes wrong and there
-    // is some kind of reject of error you call reject
+    // is some kind of error you call reject
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             posts.push(post);
